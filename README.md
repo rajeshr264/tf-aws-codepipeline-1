@@ -1,2 +1,2 @@
-# tf-aws-codepipeline-1
-testing tf and aws CI/CD tools
+# terraform-iacdevops-with-aws-codepipeline
+terraform-iacdevops-with-aws-codepipeline
