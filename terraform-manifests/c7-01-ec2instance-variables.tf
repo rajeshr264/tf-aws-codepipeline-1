@@ -12,7 +12,7 @@ variable "instance_type" {
 variable "instance_keypair" {
   description = "AWS EC2 Key pair that need to be associated with EC2 Instance"
   type = string
-  default = "rajeshr-us-east-1"
+  default = "tf-aws-proj"
 }
 
 # AWS EC2 Private Instance Count

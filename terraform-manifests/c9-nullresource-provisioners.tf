@@ -7,18 +7,18 @@ resource "null_resource" "name" {
     host     = aws_eip.bastion_eip.public_ip    
     user     = "ec2-user"
     password = ""
-    private_key = file("private-key/rajeshr-us-east-1.pem")
+    private_key = file("private-key/tf-aws-proj.pem")
   }  
 
-## File Provisioner: Copies the rajeshr-us-east-1.pem file to /tmp/rajeshr-us-east-1.pem
+## File Provisioner: Copies the tf-aws-proj.pem file to /tmp/tf-aws-proj.pem
   provisioner "file" {
-    source      = "private-key/rajeshr-us-east-1.pem"
-    destination = "/tmp/rajeshr-us-east-1.pem"
+    source      = "private-key/tf-aws-proj.pem"
+    destination = "/tmp/tf-aws-proj.pem"
   }
 ## Remote Exec Provisioner: Using remote-exec provisioner fix the private key permissions on Bastion Host
   provisioner "remote-exec" {
     inline = [
-      "sudo chmod 400 /tmp/rajeshr-us-east-1.pem"
+      "sudo chmod 400 /tmp/tf-aws-proj.pem"
     ]
   }
 }
