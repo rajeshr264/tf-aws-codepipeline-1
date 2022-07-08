@@ -32,7 +32,7 @@ phases:
       - cd "$CODEBUILD_SRC_DIR/terraform-manifests"
       - ls -lrt "$CODEBUILD_SRC_DIR/terraform-manifests"
       - terraform --version
-      - echo "aws_session token = $AWS_SESSION_TOKEN"
+      - printenv 
       - terraform init -input=false --backend-config=dev.conf
       - terraform validate
       - terraform plan -lock=false -input=false -var-file=dev.tfvars           
