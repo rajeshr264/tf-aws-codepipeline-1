@@ -17,14 +17,14 @@ terraform {
   }
   # Adding Backend as S3 for Remote State Storage
   backend "s3" {
-   profile = "221643363539_PowerUser_And_IAM"
+   #profile = "221643363539_PowerUser_And_IAM"
   }      
 }
 
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  profile = "221643363539_PowerUser_And_IAM"
+  #profile = "221643363539_PowerUser_And_IAM"
 }
 /*
 Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  
