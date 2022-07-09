@@ -1,23 +1,23 @@
 # Terraform Block
 terraform {
-  #required_version = "~> 1.2.2" # which means any version equal & above 0.14 like 0.15, 0.16 etc and < 1.xx
+  required_version = "~> 1.2.4" # which means any version equal & above 0.14 like 0.15, 0.16 etc and < 1.xx
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      #version = "~> 3.0"
+      version = "~> 4.22.0"
     }
     null = {
       source = "hashicorp/null"
-     # version = "~> 3.0"
+      version = "~> 3.1.1"
     }    
     random = {
       source = "hashicorp/random"
-      #version = "~> 3.0"
+      version = "~> 3.3.2"
     }            
   }
   # Adding Backend as S3 for Remote State Storage
   backend "s3" {
-   profile = "221643363539_PowerUser_And_IAM"
+   #profile = "221643363539_PowerUser_And_IAM"
   }      
 }
 
