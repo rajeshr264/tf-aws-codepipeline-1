@@ -34,7 +34,7 @@ phases:
       - terraform --version
       - terraform init -input=false --backend-config=dev.conf
       - terraform validate
-      - AWS_PROFILE=$AWS_PROFILE terraform plan -lock=false -input=false -var-file=dev.tfvars           
+      - terraform plan -lock=false -input=false -var-file=dev.tfvars           
       - terraform $TF_COMMAND -input=false -var-file=dev.tfvars -auto-approve  
   post_build:
     on-failure: CONTINUE   
